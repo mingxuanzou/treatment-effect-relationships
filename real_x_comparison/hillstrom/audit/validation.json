@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "same_original_sample_and_assignment": true,
+  "fixed_W12_exactly_reproduced": true,
+  "all_four_frozen_X_choices_reported": true,
+  "all_X_are_specified_columns_of_fixed_W": true,
+  "X_ranks": {
+    "small": 3,
+    "large": 5,
+    "history_newbie": 4,
+    "combined": 6
+  },
+  "rows": 64,
+  "relationship_rows": 48,
+  "all_64_intervals_defined": true,
+  "historical_small_large_comparison_run": false,
+  "historical_three_X_comparison_run": false,
+  "independent_least_squares_and_joint_covariance_and_delta_checks_pass": true,
+  "max_independent_absolute_result_difference": 4.617959348252043e-10,
+  "source_input_and_specification_hashes_match": true,
+  "audit_source_sha256": "6fbb23c659c47e39935e4eee6c056331304233e87af3f5002448892c8d0c0896"
+}

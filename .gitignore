@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+targeted_revision/super/preflight_results/
+real_x_comparison/nvss/results/predictions.npz
+real_x_comparison/hillstrom/results/analysis_arrays.npz
+
+real_x_comparison/nvss/input/nvss2019_smokers_sample.csv
+targeted_revision/super/reproduced_results/*raw.csv.gz
+x_interactions_revision/results/*.npz

@@ -1,0 +1,103 @@
+{
+  "dataset": "NVSS2019",
+  "analysis": "Observed-data exploratory comparison of four fixed common-base X choices",
+  "X_choices_frozen_before_this_comparison": true,
+  "X_columns": {
+    "age_education": [
+      "maternal_age",
+      "maternal_education"
+    ],
+    "age_education_parity_bmi": [
+      "maternal_age",
+      "maternal_education",
+      "prior_live_births",
+      "prepregnancy_bmi"
+    ],
+    "age_education_smoking": [
+      "maternal_age",
+      "maternal_education",
+      "cigarettes_prepregnancy"
+    ],
+    "age_education_parity_bmi_smoking": [
+      "maternal_age",
+      "maternal_education",
+      "prior_live_births",
+      "prepregnancy_bmi",
+      "cigarettes_prepregnancy"
+    ]
+  },
+  "X_design": {
+    "base": [
+      "maternal_age",
+      "maternal_education"
+    ],
+    "block_A": [
+      "prior_live_births",
+      "prepregnancy_bmi"
+    ],
+    "block_B": [
+      "cigarettes_prepregnancy"
+    ],
+    "order": [
+      "base",
+      "base + block A",
+      "base + block B",
+      "base + blocks A and B"
+    ]
+  },
+  "W_columns": [
+    "maternal_age",
+    "maternal_education",
+    "prior_live_births",
+    "prepregnancy_bmi",
+    "cigarettes_prepregnancy",
+    "prepregnancy_diabetes",
+    "prepregnancy_hypertension",
+    "male_infant",
+    "maternal_nativity_2",
+    "maternal_race6_2",
+    "maternal_race6_3",
+    "maternal_race6_4",
+    "maternal_race6_5",
+    "maternal_race6_6",
+    "maternal_hispanic_origin_1",
+    "maternal_hispanic_origin_2",
+    "maternal_hispanic_origin_3",
+    "maternal_hispanic_origin_4",
+    "maternal_hispanic_origin_5",
+    "maternal_hispanic_origin_6"
+  ],
+  "W_dimension": 20,
+  "W_fixed_across_X": true,
+  "Y": [
+    "birth weight in 100 grams",
+    "gestational duration in weeks"
+  ],
+  "Z": "First-trimester smoking continuation (1) versus cessation (0) among prepregnancy smokers",
+  "sample": "Same existing primary sample of 100000 complete singleton live-birth records to mothers age 20\u201344",
+  "n": 100000,
+  "n1": 74737,
+  "fold_seed": 2019102901,
+  "folds": 5,
+  "learner": "Componentwise least-squares gradient boosting of regression stumps",
+  "n_estimators": 500,
+  "learning_rate": 0.1,
+  "propensity_truncation": [
+    0.01,
+    0.99
+  ],
+  "cate_prediction_clip": [
+    30.0,
+    20.0
+  ],
+  "methods": [
+    "direct",
+    "calibrated"
+  ],
+  "inference": "Original EIF-based untruncated pointwise 95% Wald intervals",
+  "shared_nuisance_fits": "Full W nuisances are refit once per original outer fold and shared across every X. Reduced-CATE fits use training-fold pseudo-outcomes from those same training-fold nuisance fits, not cached held-out pseudo-outcomes.",
+  "h": "Maternal age >=30; passed explicitly to retain original internal diagnostic; main reported calibrated method excludes h.",
+  "data_sha256": "c3b18686d481048e5d82ad85d18806e8031dfa0e196dd3c705dded035413f4ba",
+  "estimation_source_sha256": "69e5edf2636e44b2130b38c9b83e8c6e5e610221a8cb7e98a623c17295ca47ee",
+  "interpretation": "Changing X changes the reduced-CATE target; this is an exploratory target comparison, not repeated-sampling coverage or a search for a preferred sign."
+}

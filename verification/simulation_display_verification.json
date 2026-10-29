@@ -1,0 +1,38 @@
+[
+  {
+    "file": "finite_population_bias.png",
+    "same_pixels": true,
+    "changed_components": 0,
+    "max_component_difference": 0
+  },
+  {
+    "file": "superpopulation_bias.png",
+    "same_pixels": true,
+    "changed_components": 0,
+    "max_component_difference": 0
+  },
+  {
+    "file": "finite_population_coverage.png",
+    "same_pixels": true,
+    "changed_components": 0,
+    "max_component_difference": 0
+  },
+  {
+    "file": "finite_population_rmse.png",
+    "same_pixels": true,
+    "changed_components": 0,
+    "max_component_difference": 0
+  },
+  {
+    "file": "superpopulation_coverage.png",
+    "same_pixels": true,
+    "changed_components": 0,
+    "max_component_difference": 0
+  },
+  {
+    "file": "superpopulation_rmse.png",
+    "same_pixels": true,
+    "changed_components": 0,
+    "max_component_difference": 0
+  }
+]

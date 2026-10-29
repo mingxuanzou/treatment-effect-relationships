@@ -1,0 +1,23 @@
+Simulation replication audit (2026-10-29 UTC)
+
+Added the missing full superpopulation runner targeted_revision/super/code/run_all.py. No DGP, estimator, inference, seed, or learner changed. The runner generates direct, calibrated, naive, oracle and X-only estimates from the frozen specification, independently computes the efficiency benchmark, supports a small preflight, saves raw results atomically, optionally verifies archived records, and refreshes plot inputs on request.
+
+Full superpopulation run: python3 targeted_revision/super/code/run_all.py --verify-archive
+All 5000 datasets (1000 at each n=500,1000,2000,5000,10000), 25000 method fits, and 200000 scalar records reproduced. Every coverage indicator agrees with the archive. Largest absolute point estimate difference 2.85e-14; largest SE difference 7.28e-12 occurs for an extreme small-sample ratio. All plotted bias/RMSE/coverage summaries agree to 1e-9 relative / 1e-10 absolute tolerance.
+
+Full finite run: python3 x_interactions_revision/code/run_comparison.py
+All 10000 assignments (2000 at each n=200,500,1000,2000,5000), 40000 fits (includes retained unplotted W1), 320000 scalar estimates, zero failures. Every raw output array is bit-for-bit identical to the original results. Finite truth recomputed by independent projection.
+
+Preflight: 15 superpopulation datasets and 10 finite assignments per n passed. Ding exhaustive check enumerated all 70 balanced allocations for n=8; coefficient means and covariance formulas agreed to floating point precision.
+
+Plot rebuild: python3 simulation/build_simulation_figures.py
+After replacing plotting summaries with fresh results, all six figure PNGs have exactly identical pixels to the original six figures. PDF bytes can differ because of metadata.
+
+Portable saved-result verification: python3 verify_simulations.py
+Verifies freshly saved super/finite raw output, independent finite truth, all-attempt coverage, conditional bias/RMSE, and corresponding figure inputs. No historical archive dependency.
+
+Important interpretation: undefined direct point estimates are excluded from bias/RMSE, but their intervals count as noncoverage in denominator1000. Code gates rho, theta and alpha on BOTH variances>0; theta mathematically only needs V11>0, so this implementation convention should be stated. Naive theta/alpha use usual homoskedastic fitted-CATE OLS standard errors; the other naive quantities use empirical influence calculations treating predictions as observed.
+
+DGP: q(x)=(x^2-1)/sqrt(.8), h1=(x1+.6q(x2))/sqrt(1.36), h2=(-.6x1+q(x2))/sqrt(1.36), h3=x3. e=.5+.06x1-.04q(x2)+.06u. m01=.6x1+.3q(x2)+.4q(x3)+.8u+.2x1u; m02=.4x2+.4q(x1)+.2q(x3)+.7u-.15x2u. Reduced effects tau1=1+.64h1+.48h3; tau2=-.5+.1925h1+1.1sqrt(.609375)h2+.66h3. Full effects add (.3u,-.25u). Errors jointly Gaussian variance1 correlation.3.
+
+Finite kappa: independent N(0,1) residual-effect columns are orthogonalized to X, then each rescaled to sample SD1 (divisor n-1); kappa=2 is the exact finite-population residual-effect SD for each outcome. Ding covariance: sum_z A sample_cov(q_i:Z_i=z) A^T/n_z, q_i=(X_i Y_i1,X_i Y_i2) stacked outcome-major, A=I_2 kron inverse(X^T X/n), then the manuscript's delta gradients.

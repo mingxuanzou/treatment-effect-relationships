@@ -1,0 +1,151 @@
+{
+  "version": "Hillstrom_real_X_common_base_v2",
+  "frozen_utc": "2026-10-28T23:27:17Z",
+  "new_choices_frozen_before_new_effect_estimation": true,
+  "existing_small_large_results_previously_known": true,
+  "source": "https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html",
+  "source_csv_sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece",
+  "population": "Same customers assigned Mens E-Mail or No E-Mail, preserving original row order; condition on pair membership and realized treatment counts.",
+  "n": 42613,
+  "n1": 21307,
+  "n0": 21306,
+  "Z": {
+    "1": "Mens E-Mail",
+    "0": "No E-Mail"
+  },
+  "Y": [
+    "visit: any website visit in following two weeks, 0/1",
+    "spend: dollars spent in following two weeks"
+  ],
+  "X_choices": {
+    "small": {
+      "label": "Recency and spending",
+      "names": [
+        "intercept",
+        "recency",
+        "log1p_history"
+      ],
+      "purpose": "Purchase timing and spending amount; existing small X."
+    },
+    "large": {
+      "label": "Recency, spending, categories",
+      "names": [
+        "intercept",
+        "recency",
+        "log1p_history",
+        "mens",
+        "womens"
+      ],
+      "purpose": "Add prior purchase categories; existing large X."
+    },
+    "history_newbie": {
+      "label": "Recency, spending, new customer",
+      "names": [
+        "intercept",
+        "recency",
+        "log1p_history",
+        "newbie"
+      ],
+      "purpose": "Add new-customer status to purchase timing and amount."
+    },
+    "combined": {
+      "label": "Recency, spending, categories, new customer",
+      "names": [
+        "intercept",
+        "recency",
+        "log1p_history",
+        "mens",
+        "womens",
+        "newbie"
+      ],
+      "purpose": "Jointly add prior purchase categories and new-customer status to the common purchase-timing and spending base; additive terms only."
+    }
+  },
+  "W_names": [
+    "intercept",
+    "recency",
+    "log1p_history",
+    "mens",
+    "womens",
+    "newbie",
+    "zip_Surburban",
+    "zip_Urban",
+    "channel_Phone",
+    "channel_Web",
+    "recency_by_newbie",
+    "log1p_history_by_newbie"
+  ],
+  "W_policy": "Exactly the same original 12-column W matrix for every X; no new auxiliary features or interactions. The residual score vector X_i times outcome residual depends on X mechanically.",
+  "features": {
+    "recency": "Months since last purchase",
+    "log1p_history": "log(1+past-year dollar spending)",
+    "mens": "Purchased mens merchandise during past year, 0/1",
+    "womens": "Purchased womens merchandise during past year, 0/1",
+    "newbie": "New customer during past twelve months, 0/1",
+    "zip": "Urban/Suburban/Rural; Rural reference; source spells Surburban",
+    "channel": "Past-year purchase channel; Multichannel reference; Phone and Web indicators",
+    "interactions": "recency_by_newbie and log1p_history_by_newbie multiply standardized original recency/log-history by raw newbie, then center/scale as before"
+  },
+  "preprocessing": "Match original finite-population preprocessing: all nonconstant columns centered/scaled over same full selected population, ddof=0; preserve original interaction construction. No outcome transformation, trimming, imputation or sample changes.",
+  "methods": [
+    "ols",
+    "model_assisted"
+  ],
+  "targets": [
+    "ATE1",
+    "ATE2",
+    "V11",
+    "V22",
+    "V12",
+    "rho",
+    "theta",
+    "alpha"
+  ],
+  "interpretation": "X defines linear projections of individual treatment effects and changes the relationship estimands. W assists estimation at each fixed X. Real-data causal truth remains unknown.",
+  "inference": "Original joint outcome-major conservative coefficient covariance with nz-1 normalization; delta-method normal 95% intervals, untruncated; every X reported.",
+  "units": {
+    "ATE1": "visit probability",
+    "ATE2": "dollars",
+    "V11": "visit-probability squared",
+    "V22": "dollars squared",
+    "V12": "visit-probability times dollars",
+    "rho": "dimensionless",
+    "theta": "dollars per unit visit-probability effect",
+    "alpha": "dollars"
+  },
+  "failure_policy": "Every X and both methods reported; undefined outputs retained with defined=false.",
+  "finite_code_sha256": "c6dc4d071062e45404c72206998a8e74c84cedfb9b0dcae0245b9cc06d75d16c",
+  "claim_contract": {
+    "question": "How do relationship estimates differ across meaningful customer projection spaces?",
+    "varied": "X only",
+    "fixed": "Sample, observed assignment, Y, W, transformations, estimators and inference",
+    "comparison": "Four shared-base target spaces, with category and customer-status blocks added separately and jointly; OLS and MA within each.",
+    "scope": "Exploratory comparisons; no known-truth or empirical-coverage claims"
+  },
+  "previously_estimated_choices": [
+    "small",
+    "large",
+    "history_newbie"
+  ],
+  "newly_estimated_choice": "combined",
+  "previous_analysis_archive": "archive/previous_four_X",
+  "comparison_edges": [
+    [
+      "small",
+      "large"
+    ],
+    [
+      "small",
+      "history_newbie"
+    ],
+    [
+      "large",
+      "combined"
+    ],
+    [
+      "history_newbie",
+      "combined"
+    ]
+  ],
+  "revision_note": "User approved the shared-base diamond. Retain original sample, W12, outcomes, assignment, preprocessing and estimators. Prior category-only analysis is archived, not deleted. No category-by-newbie interactions added."
+}

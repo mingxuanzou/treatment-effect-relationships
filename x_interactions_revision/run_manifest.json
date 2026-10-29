@@ -1,0 +1,22 @@
+{
+  "specification_sha256": "72517d5c55b6b821ea10f29203a6955ec99d90659b0fb0d3af374d9866eb3b7b",
+  "code_sha256": {
+    "ding.py": "104b1ce2b82f370d783aaaed1ccca5426af07b4c2ae236da012027f43f0c7176",
+    "finite.py": "c6dc4d071062e45404c72206998a8e74c84cedfb9b0dcae0245b9cc06d75d16c",
+    "finite_sim.py": "4c81c4c83c7c7e4201c5026e5949d3ead72286375b2f31827255de4c8994eb8d",
+    "population.py": "00ebebc966aa0ce070675d6f177f83c7815d26582e4978015c190f04b6963e0b",
+    "preflight_ding.py": "c79002dd2462048fd3ba5dae5ea62d7eb52402894a108295e45e2e8cac300a0a",
+    "run_comparison.py": "84944c3a080b89cfe554880cb451fc72cdb9e9527b2b44be0c436e82bcade061"
+  },
+  "reps": 2000,
+  "workers": 4,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "started_utc": "2026-10-29T04:35:26Z",
+  "completed_utc": "2026-10-29T04:35:40Z",
+  "completed_scenarios": 5,
+  "attempted_assignments": 10000,
+  "attempted_method_fits": 40000,
+  "recorded_scalar_estimates": 320000,
+  "failures": 0
+}

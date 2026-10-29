@@ -1,0 +1,47 @@
+{
+  "cells": [
+    {
+      "n": 200,
+      "unchanged_baseline_arrays": 21,
+      "baseline_arrays_exactly_equal": true,
+      "population_and_assignment_hashes_match": true,
+      "W1_columns": 10,
+      "W1_rank": 10
+    },
+    {
+      "n": 500,
+      "unchanged_baseline_arrays": 21,
+      "baseline_arrays_exactly_equal": true,
+      "population_and_assignment_hashes_match": true,
+      "W1_columns": 10,
+      "W1_rank": 10
+    },
+    {
+      "n": 1000,
+      "unchanged_baseline_arrays": 21,
+      "baseline_arrays_exactly_equal": true,
+      "population_and_assignment_hashes_match": true,
+      "W1_columns": 10,
+      "W1_rank": 10
+    },
+    {
+      "n": 2000,
+      "unchanged_baseline_arrays": 21,
+      "baseline_arrays_exactly_equal": true,
+      "population_and_assignment_hashes_match": true,
+      "W1_columns": 10,
+      "W1_rank": 10
+    },
+    {
+      "n": 5000,
+      "unchanged_baseline_arrays": 21,
+      "baseline_arrays_exactly_equal": true,
+      "population_and_assignment_hashes_match": true,
+      "W1_columns": 10,
+      "W1_rank": 10
+    }
+  ],
+  "summary_rows": 160,
+  "all_320000_intervals_available": true,
+  "failures": 0
+}

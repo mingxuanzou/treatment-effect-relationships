@@ -1,0 +1,93 @@
+{
+  "version": "x_only_same_regular_draws_v1",
+  "purpose": "Add confounding-adjustment restricted to X, retaining the same reduced-CATE target and all original settings.",
+  "reps": 1000,
+  "workers": 4,
+  "learner": "cubic_ridge",
+  "target_X": "first three original W columns",
+  "nuisance_W": "first three original W columns, intentionally omitting confounder U",
+  "fit": "fit_super_v2(X,X,Y,Z,seed=split_seed,known_e=None,learner=cubic_ridge,clip=12)[direct]",
+  "inference": "Unchanged direct estimator and delta-method untruncated separate 95% Wald intervals.",
+  "failure_handling": "All attempted replications retained; undefined or failed intervals count as noncoverage; bias and RMSE use defined point estimates with counts shown.",
+  "source_sha256": {
+    "super.py": "69e5edf2636e44b2130b38c9b83e8c6e5e610221a8cb7e98a623c17295ca47ee",
+    "super_v4.py": "68ae69928375ce66ec1a3d912fff83b490a16c183a4fd1aca003dc2efd55bb70"
+  },
+  "cells": [
+    {
+      "cell_id": "v4c_00",
+      "kind": "regular",
+      "n": 500,
+      "weak": "none",
+      "strength": 1.0,
+      "data_seed_base": 621000000,
+      "split_seed_base": 622000000,
+      "rho": 0.5,
+      "s1": 0.8,
+      "s2": 1.1,
+      "noise_corr": 0.3,
+      "common": 0.0,
+      "design": "observational"
+    },
+    {
+      "cell_id": "v4c_01",
+      "kind": "regular",
+      "n": 1000,
+      "weak": "none",
+      "strength": 1.0,
+      "data_seed_base": 621010000,
+      "split_seed_base": 622010000,
+      "rho": 0.5,
+      "s1": 0.8,
+      "s2": 1.1,
+      "noise_corr": 0.3,
+      "common": 0.0,
+      "design": "observational"
+    },
+    {
+      "cell_id": "v4c_02",
+      "kind": "regular",
+      "n": 2000,
+      "weak": "none",
+      "strength": 1.0,
+      "data_seed_base": 621020000,
+      "split_seed_base": 622020000,
+      "rho": 0.5,
+      "s1": 0.8,
+      "s2": 1.1,
+      "noise_corr": 0.3,
+      "common": 0.0,
+      "design": "observational"
+    },
+    {
+      "cell_id": "v4c_03",
+      "kind": "regular",
+      "n": 5000,
+      "weak": "none",
+      "strength": 1.0,
+      "data_seed_base": 621030000,
+      "split_seed_base": 622030000,
+      "rho": 0.5,
+      "s1": 0.8,
+      "s2": 1.1,
+      "noise_corr": 0.3,
+      "common": 0.0,
+      "design": "observational"
+    },
+    {
+      "cell_id": "v4c_04",
+      "kind": "regular",
+      "n": 10000,
+      "weak": "none",
+      "strength": 1.0,
+      "data_seed_base": 621040000,
+      "split_seed_base": 622040000,
+      "rho": 0.5,
+      "s1": 0.8,
+      "s2": 1.1,
+      "noise_corr": 0.3,
+      "common": 0.0,
+      "design": "observational"
+    }
+  ]
+}

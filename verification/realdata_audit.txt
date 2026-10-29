@@ -1,0 +1,50 @@
+Real-data replication audit, 2026-10-29 UTC
+
+Sources:
+- real_data_X_comparison_sources.zip (Library version 6)
+- Identical analyses embedded in tables_figures_sources.zip (version 18)
+- Supplied manuscript: upload/ZL0_7-26_simulation_application(1).tex
+
+Fresh verification:
+1. Copied the full original real-data archive to realdata_verify_run.
+2. Ran python3 hillstrom/code/run_comparison.py and python3 nvss/code/run.py.
+3. Ran audit/validate.py for both nvss and hillstrom and build_tables.py.
+4. All 64 rows per dataset of estimates.csv exactly match the saved archive, including all estimates, SEs, raw confidence limits, and defined flags. All NVSS prediction arrays and Hillstrom analysis arrays exactly match. The 2 table PNGs and display CSVs match the archive byte for byte.
+5. Independent reconstruction max absolute result difference: NVSS 4.440892098500626e-16; Hillstrom 4.617959348252043e-10 (large coefficient-covariance entries, within audit tolerance). No fit failure.
+6. A second minimal-package run with only raw sample data, analysis scripts and specifications, excluding all historical prediction/archive inputs, gives the same exact estimates and table PNGs/CSVs.
+
+Code-derived red query answers:
+- NVSS uses 5 folds, fold seed 2019102901, 500 componentwise least-squares boosting iterations of stumps, learning rate .1. Propensities clipped to [.01,.99] in outer holdout and training pseudo-outcomes.
+- Fresh refit of the holdout propensity learner before clipping: min .007687488016918986, max 1.1398360700884551. The least-squares learner is not constrained to [0,1] before clipping. After clipping, min .01, max .99; 1 lower-clipped and 2095 upper-clipped records (2.096%). Clipped raw refit predictions exactly equal saved predictions.
+- The NVSS archive contains a 100000-row sample CSV with source-row identifiers but not the national extraction/sampling script. Thus the alleged 252597 eligible records/SRSWOR seed20191028 is not independently recoverable from these two archives alone. Do not describe this as independently verified by this audit.
+- Hillstrom uses 42613 customers: 21307 men's-email, 21306 no-email. Of these, 42224 (99.087133%) have zero spend; largest observed two-week spend is $499.
+
+Manuscript numeric check:
+Checked 246 finite numeric fields in the two manuscript tables against full-precision regenerated results with the displayed units, digits, and truncation. 240 agree. Six double-rounding discrepancies require the following changes:
+- NVSS Base+A, Direct, V12 estimate: 19.7 -> 19.6 (exact 19.6495288509664).
+- NVSS Base+A, Calibrated, V12 estimate: 19.5 -> 19.4 (exact 19.4488355029852).
+- NVSS Base+B, Direct, V12 upper: 57.1 -> 57.0 (exact 57.0491185279358).
+- NVSS Base+A+B, Calibrated, V11 estimate: 87.1 -> 87.0 (exact 87.0499832297605).
+- NVSS Base+A+B, Calibrated, V12 lower: -21.1 -> -21.0 (exact -21.046345736097702).
+- Hillstrom Base+A+B, Model assisted, V11 upper: 7.15 -> 7.14 (exact 7.144710963636999).
+
+Portable package changes (only tables_figures_sources/real_x_comparison):
+- nvss/code/run.py and hillstrom/code/run_comparison.py now make historical input/archive comparison files optional. Estimator code super.py and finite.py is unchanged. Results directories are created automatically.
+- audit/validate.py retains independent estimator/covariance/delta reconstruction and scientific invariants; historical comparisons run only when their reference files are present, and the audit records whether they ran. Default invocation now audits both datasets.
+- Added write_manuscript_tables.py, writing tables/nvss_manuscript_table.tex and tables/hillstrom_manuscript_table.tex from unrounded raw results. Uses manuscript units and precision and avoids double rounding.
+- Full originals and original independent audits remain in realdata_verify_run and replication_sources/real_data_X_comparison_sources. Clean minimal verification resides in realdata_minimal_test.
+
+Commands for minimal fresh replication, from real_x_comparison:
+  python3 nvss/code/run.py
+  python3 hillstrom/code/run_comparison.py
+  python3 audit/validate.py
+  python3 build_tables.py
+  python3 write_manuscript_tables.py
+
+Minimal required input files:
+  nvss/input/nvss2019_smokers_sample.csv
+  hillstrom/input/hillstrom_raw.csv.gz
+  hillstrom/spec.json
+The nvss/spec.json is recreated by run.py. Scripts, audit, and table writer are also required. Historical inputs and archives are not required.
+
+Final presentation correction: build_tables.py now displays the same single-rounded precision and scaling as the manuscript (NVSS covariance entries times1000; Hillstrom visit percentage-point units). The two application table PNGs/PDFs intentionally differ from the historical display; the six simulation figures remain identical. The prior byte-identical table check applies before this presentation correction.

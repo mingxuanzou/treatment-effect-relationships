@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "finite_population": [
+    {
+      "n": 200,
+      "assignments": 2000,
+      "methods": 4
+    },
+    {
+      "n": 500,
+      "assignments": 2000,
+      "methods": 4
+    },
+    {
+      "n": 1000,
+      "assignments": 2000,
+      "methods": 4
+    },
+    {
+      "n": 2000,
+      "assignments": 2000,
+      "methods": 4
+    },
+    {
+      "n": 5000,
+      "assignments": 2000,
+      "methods": 4
+    }
+  ],
+  "superpopulation": [
+    {
+      "n": 500,
+      "datasets": 1000,
+      "methods": 5
+    },
+    {
+      "n": 1000,
+      "datasets": 1000,
+      "methods": 5
+    },
+    {
+      "n": 2000,
+      "datasets": 1000,
+      "methods": 5
+    },
+    {
+      "n": 5000,
+      "datasets": 1000,
+      "methods": 5
+    },
+    {
+      "n": 10000,
+      "datasets": 1000,
+      "methods": 5
+    }
+  ],
+  "coverage_denominator": "all attempted assignments or datasets",
+  "bias_rmse_denominator": "finite point estimates",
+  "truths_independently_recomputed": true,
+  "figure_inputs_match_results": true
+}

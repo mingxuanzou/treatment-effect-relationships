@@ -1,0 +1,21 @@
+{
+  "pdf_pages": 2,
+  "tables": 2,
+  "X_choices_per_dataset": 4,
+  "design": "common base; add A; add B; add both",
+  "nvss_methods": [
+    "direct",
+    "calibrated"
+  ],
+  "hillstrom_methods": [
+    "ols",
+    "model_assisted"
+  ],
+  "PNG_integrity": "passed",
+  "eigenvalues_displayed": false,
+  "Hillstrom_Y1_display": "percentage points",
+  "intervals": "95% Wald intersected with [-1,1] for rho and [0,infinity) for V11/V22; other intervals unchanged; disjoint intersections reported Empty",
+  "figures_modified": false,
+  "separate_marginal_variance_section": false,
+  "choices_of_X_title_text": false
+}

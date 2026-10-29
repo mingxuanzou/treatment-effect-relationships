@@ -1,0 +1,69 @@
+{
+  "n": 42613,
+  "n1": 21307,
+  "n0": 21306,
+  "historical_array_checks_run": false,
+  "W_columns": [
+    "intercept",
+    "recency",
+    "log1p_history",
+    "mens",
+    "womens",
+    "newbie",
+    "zip_Surburban",
+    "zip_Urban",
+    "channel_Phone",
+    "channel_Web",
+    "recency_by_newbie",
+    "log1p_history_by_newbie"
+  ],
+  "W_rank": 12,
+  "X_ranks": {
+    "small": 3,
+    "large": 5,
+    "history_newbie": 4,
+    "combined": 6
+  },
+  "input_array_hashes": {
+    "X_small": "6a50773e5f68ad68fbcdbfd3e1c4c6c943e37473a3a2cdc970899c6e380e18cc",
+    "X_large": "193f09de09164722f92f244032fc3251ecfe73eb27d33e467283b95121c5e5e1",
+    "W": "11ddcd1da7ffa71841994712e69d2959c6dbd2854d987a1f518310cb0a6f1ecd",
+    "Y": "9f100299bd9abf83b9c70da8fcbfd638f4798f9e642a64959fafe1e9b51f9ba1",
+    "Z": "bfca97a4c4374d1c29d98ef01b2eef88a9bee1191180749cf3399dadac3ebb7c",
+    "original_row": "59333cda67f73e0de94febe350536271820184ad2669dfd249c8fb87fa3b51df"
+  },
+  "X_hashes": {
+    "small": "6a50773e5f68ad68fbcdbfd3e1c4c6c943e37473a3a2cdc970899c6e380e18cc",
+    "large": "193f09de09164722f92f244032fc3251ecfe73eb27d33e467283b95121c5e5e1",
+    "history_newbie": "680983c6501f929e33b1b4e3b2a08c5dd37b9f82aa87cc434fee23258ea6befd",
+    "combined": "d38c60f193f732c6ba99d1a0211d940a29c5094ce6f699e15a8607cd4c8e4a8d"
+  },
+  "category_group_counts": {
+    "mens=0,womens=1": 19087,
+    "mens=1,womens=0": 19196,
+    "mens=1,womens=1": 4330
+  },
+  "started_utc": "2026-10-29T04:38:48Z",
+  "completed_utc": "2026-10-29T04:38:49Z",
+  "specification_sha256": "5339038a776ef7fab0c61fa1a75f9bb90fcd31d262e1f1fba1660d7060917930",
+  "code_sha256": {
+    "finite.py": "c6dc4d071062e45404c72206998a8e74c84cedfb9b0dcae0245b9cc06d75d16c",
+    "run_comparison.py": "4a3f88104d8265ca907f91a023b1ec5e205bcc21c3695b1116745f5dab052d11"
+  },
+  "input_file_sha256": {
+    "hillstrom_raw.csv.gz": "86c85da66a427623782b7b4e0d4fd898cd49f8bc9cfa117584c8422faf7a16be"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "attempted_X_choices": 4,
+  "attempted_method_fits": 8,
+  "returned_scalar_estimates": 64,
+  "relationship_rows": 48,
+  "defined_intervals": 64,
+  "failures": [],
+  "archive_reproduction_max_abs_differences": {},
+  "previous_common_X_reproduction_max_abs_differences": {},
+  "W_identical_across_X": true,
+  "no_new_W_features": true
+}

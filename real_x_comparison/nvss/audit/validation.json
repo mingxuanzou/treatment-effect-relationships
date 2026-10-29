@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "all_four_frozen_X_choices_reported": true,
+  "rows": 64,
+  "no_naive_rows": true,
+  "same_sample_and_fixed_W20": true,
+  "historical_nuisance_comparison_run": false,
+  "source_uses_same_outer_training_fold_pseudo_outcomes": true,
+  "historical_base_comparison_run": false,
+  "historical_archive_comparison_run": false,
+  "max_original_estimate_or_interval_difference": 0.0,
+  "max_independently_reconstructed_estimate_or_interval_difference": 4.440892098500626e-16,
+  "all_eight_marginal_variance_orderings_pass": true,
+  "max_independent_variance_ordering_difference": 3.25434124093249e-15,
+  "defined_counts_of_eight_per_method": {
+    "age_education:direct": 5,
+    "age_education:calibrated": 8,
+    "age_education_parity_bmi:direct": 5,
+    "age_education_parity_bmi:calibrated": 8,
+    "age_education_smoking:direct": 5,
+    "age_education_smoking:calibrated": 8,
+    "age_education_parity_bmi_smoking:direct": 5,
+    "age_education_parity_bmi_smoking:calibrated": 8
+  },
+  "audit_source_sha256": "6fbb23c659c47e39935e4eee6c056331304233e87af3f5002448892c8d0c0896"
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "schedule": "independent",
+    "n": 200,
+    "p": 0.5,
+    "kappa": 2.0,
+    "rho": 0.5,
+    "strength": 1.0,
+    "weak": "none",
+    "population_seed": 3026155119,
+    "assignment_seed": 661149685,
+    "scenario": "fw_n200",
+    "family": "F2_W",
+    "stage": "user_requested_followup",
+    "xset": "large",
+    "archived_scenario": "fv2_007",
+    "projected_noise_sd": 1.0,
+    "baseline_residual_correlation": 0.0075173129779308265,
+    "quadratic_noise_V11": 0.11017737807804777,
+    "quadratic_noise_V22": 0.12169403243340485,
+    "quadratic_noise_V12": 0.004993204128436359,
+    "reps": 10,
+    "attempted_assignments": 10,
+    "attempted_method_fits": 40,
+    "failures": [],
+    "seconds": 0.019622325897216797,
+    "W_columns": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "W_population_rank": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "population_hashes": {
+      "X": "3b89128f79a6a2eea04196a6c50b1a6bc4c25dff8cedc960dad5f951955c547e",
+      "U": "ecb2490578b6506e35fb7c5a8acd12b9058b4ee5c30d3fbfab7f5ea8675d4d14",
+      "irrelevant": "e11fe48fa745685b156b754f3131f8d8a1c9e0ac523d978c6eedb0506cb3f1fd",
+      "Y0": "f9e9eb93c60f180c59107b149724f7f8e655d5ddca65d63ac0e7d7f736ae807a",
+      "Y1": "1b0fae989be4a02057f8cbd9eed4ae06c09249f17e7f513c72ea4e8f2f419570"
+    },
+    "assignment_uint8_concatenation_sha256": "8e1d8efdbdfbbd1da4da5a01e181378ac7fd747fd990b9f9932ac198882dd66c",
+    "archive_reproduction": {
+      "ols_estimate_max_abs_difference": 0.0,
+      "ols_se_max_abs_difference": 0.0,
+      "model_assisted_estimate_max_abs_difference": 0.0,
+      "model_assisted_se_max_abs_difference": 0.0,
+      "ding_plugin_estimate_max_abs_difference": 0.0,
+      "ding_plugin_se_max_abs_difference": 0.0
+    },
+    "min_coefficient_covariance_ordering_eigenvalue": 0.0004276778423195025,
+    "estimate_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    },
+    "interval_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    }
+  },
+  {
+    "schedule": "independent",
+    "n": 500,
+    "p": 0.5,
+    "kappa": 2.0,
+    "rho": 0.5,
+    "strength": 1.0,
+    "weak": "none",
+    "population_seed": 896067110,
+    "assignment_seed": 1713340421,
+    "scenario": "fw_n500",
+    "family": "F2_W",
+    "stage": "user_requested_followup",
+    "xset": "large",
+    "archived_scenario": "fv2_015",
+    "projected_noise_sd": 1.0,
+    "baseline_residual_correlation": 0.0038280347689040838,
+    "quadratic_noise_V11": 0.05065678669460931,
+    "quadratic_noise_V22": 0.04958441634096582,
+    "quadratic_noise_V12": 0.00023651750100697413,
+    "reps": 10,
+    "attempted_assignments": 10,
+    "attempted_method_fits": 40,
+    "failures": [],
+    "seconds": 0.022243022918701172,
+    "W_columns": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "W_population_rank": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "population_hashes": {
+      "X": "95ee02e7878857599dc5c6b723ea06174f6d1d4d07a9e1e1eac0ddf0b0045afa",
+      "U": "abafbfeea4aed86ea73fc7ddf65a682f096eabb8795220e3e8534498e864314e",
+      "irrelevant": "228d9f5dd663b3dcbb2c3e84d13afb87a7b714107ae840938e3b9a4bcfed4700",
+      "Y0": "02c09d99ac6eb66a3d7b00090e9d2d80d0e009227622f56d913630c5743fe0ea",
+      "Y1": "e9d25024f6d30b6c9acfd9decc339e7f80178464014cb45b929af4c14645dffe"
+    },
+    "assignment_uint8_concatenation_sha256": "9f0765f9bb62dfc4509473a7bc312c4f20a820d613182bf9e49c7d0ba6086b3c",
+    "archive_reproduction": {
+      "ols_estimate_max_abs_difference": 0.0,
+      "ols_se_max_abs_difference": 0.0,
+      "model_assisted_estimate_max_abs_difference": 0.0,
+      "model_assisted_se_max_abs_difference": 0.0,
+      "ding_plugin_estimate_max_abs_difference": 0.0,
+      "ding_plugin_se_max_abs_difference": 0.0
+    },
+    "min_coefficient_covariance_ordering_eigenvalue": 3.0723589309035995e-05,
+    "estimate_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    },
+    "interval_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    }
+  },
+  {
+    "schedule": "independent",
+    "n": 1000,
+    "p": 0.5,
+    "kappa": 2.0,
+    "rho": 0.5,
+    "strength": 1.0,
+    "weak": "none",
+    "population_seed": 3724913916,
+    "assignment_seed": 1619683660,
+    "scenario": "fw_n1000",
+    "family": "F2_W",
+    "stage": "user_requested_followup",
+    "xset": "large",
+    "archived_scenario": "fv2_023",
+    "projected_noise_sd": 1.0,
+    "baseline_residual_correlation": 0.0008484186751642078,
+    "quadratic_noise_V11": 0.024152979846244635,
+    "quadratic_noise_V22": 0.025397352488806823,
+    "quadratic_noise_V12": 0.001113230740140437,
+    "reps": 10,
+    "attempted_assignments": 10,
+    "attempted_method_fits": 40,
+    "failures": [],
+    "seconds": 0.026712417602539062,
+    "W_columns": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "W_population_rank": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "population_hashes": {
+      "X": "e810af9ce701a3ea93b842308e6ee45a6a43cd9a07b3160d6668eda376b37b78",
+      "U": "5e127cbbe8c74475249296482ee923c79f1e40eba3db90298ba0398ac3d7f3c8",
+      "irrelevant": "d2cb2217c1412a4e1c333618b1409dc8adb7c58beac5f2724a38e83121034e14",
+      "Y0": "73b4cd3bc4f1fa298c725b26d166b596f2f4f0d00de8e3ab6868e2291e3fbffe",
+      "Y1": "1649759b0627c46b1328c293a3bb220281a11bb2176fb859ce8c11e2099d7209"
+    },
+    "assignment_uint8_concatenation_sha256": "35535d5f55a0d53c12e564f234c161d4a519e948a59d27a06106c60a0e0ca5d5",
+    "archive_reproduction": {
+      "ols_estimate_max_abs_difference": 0.0,
+      "ols_se_max_abs_difference": 0.0,
+      "model_assisted_estimate_max_abs_difference": 0.0,
+      "model_assisted_se_max_abs_difference": 0.0,
+      "ding_plugin_estimate_max_abs_difference": 0.0,
+      "ding_plugin_se_max_abs_difference": 0.0
+    },
+    "min_coefficient_covariance_ordering_eigenvalue": 1.725812040981197e-05,
+    "estimate_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    },
+    "interval_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    }
+  },
+  {
+    "schedule": "independent",
+    "n": 2000,
+    "p": 0.5,
+    "kappa": 2.0,
+    "rho": 0.5,
+    "strength": 1.0,
+    "weak": "none",
+    "population_seed": 2773265489,
+    "assignment_seed": 1515947193,
+    "scenario": "fw_n2000",
+    "family": "F2_W",
+    "stage": "user_requested_followup",
+    "xset": "large",
+    "archived_scenario": "fv2_031",
+    "projected_noise_sd": 1.0,
+    "baseline_residual_correlation": 0.01958138376635479,
+    "quadratic_noise_V11": 0.012324854423489972,
+    "quadratic_noise_V22": 0.01161294155776647,
+    "quadratic_noise_V12": -0.0004661349574216229,
+    "reps": 10,
+    "attempted_assignments": 10,
+    "attempted_method_fits": 40,
+    "failures": [],
+    "seconds": 0.03583502769470215,
+    "W_columns": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "W_population_rank": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "population_hashes": {
+      "X": "eb98c506e522f3409484afa7fe7a059474bc509a9fbb5b2fde3655cb419735ec",
+      "U": "208b29642a65f24f07b85c7dfe8fdcb0fd2cb63052600761078a5ff1c46ed348",
+      "irrelevant": "44f2bc511b1a64671c3f22d99d1cd30eaae085742884fdcbb138f46dd657badb",
+      "Y0": "604e69eb55123f40b715d1f3370ddde35810f502d67d1b8a96f0dbda466762c5",
+      "Y1": "7431628c87cae096d00515a3648ad6b9af91f7a0840cb475631590a95e0ba0cb"
+    },
+    "assignment_uint8_concatenation_sha256": "e28bb6a5c7fe2bb2d11c19e7a055e7288df5da8cd624fe0f9c01508afa82806d",
+    "archive_reproduction": {
+      "ols_estimate_max_abs_difference": 0.0,
+      "ols_se_max_abs_difference": 0.0,
+      "model_assisted_estimate_max_abs_difference": 0.0,
+      "model_assisted_se_max_abs_difference": 0.0,
+      "ding_plugin_estimate_max_abs_difference": 0.0,
+      "ding_plugin_se_max_abs_difference": 0.0
+    },
+    "min_coefficient_covariance_ordering_eigenvalue": 2.7610848753445315e-06,
+    "estimate_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    },
+    "interval_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    }
+  },
+  {
+    "schedule": "independent",
+    "n": 5000,
+    "p": 0.5,
+    "kappa": 2.0,
+    "rho": 0.5,
+    "strength": 1.0,
+    "weak": "none",
+    "population_seed": 3281046365,
+    "assignment_seed": 1653540780,
+    "scenario": "fw_n5000",
+    "family": "F2_W",
+    "stage": "user_requested_followup",
+    "xset": "large",
+    "archived_scenario": "fv2_039",
+    "projected_noise_sd": 1.0,
+    "baseline_residual_correlation": 0.04218469714088966,
+    "quadratic_noise_V11": 0.004752698298507271,
+    "quadratic_noise_V22": 0.004892670427440275,
+    "quadratic_noise_V12": 8.787319152454395e-05,
+    "reps": 10,
+    "attempted_assignments": 10,
+    "attempted_method_fits": 40,
+    "failures": [],
+    "seconds": 0.0647115707397461,
+    "W_columns": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "W_population_rank": {
+      "model_assisted": 12,
+      "ma_x_interactions": 10
+    },
+    "population_hashes": {
+      "X": "1e56b929089228406b65b60adabc2d0435f3c2cc4cde1861ae715775e161be0c",
+      "U": "65f1acea4c3716e4f1f7d6d380e351f739a0e08e27c5cfa0e5f5061ce3bc2644",
+      "irrelevant": "e4d0f9bf41a405ae9897216128b02c474f898f3ee8d34948e8c7120eeaf15db7",
+      "Y0": "d94cc19a64718a542dc4e5b827727234b3c21dd782a31e7944f416a9f4dee0e2",
+      "Y1": "a5b4da54d408f2d02d482750597ae8c03076549ae5e5fd6befd009e0349ff288"
+    },
+    "assignment_uint8_concatenation_sha256": "21e75f2fbae6eed3a12c3ab347a9c28a17f4831052192358c694d3644e6af69a",
+    "archive_reproduction": {
+      "ols_estimate_max_abs_difference": 0.0,
+      "ols_se_max_abs_difference": 0.0,
+      "model_assisted_estimate_max_abs_difference": 0.0,
+      "model_assisted_se_max_abs_difference": 0.0,
+      "ding_plugin_estimate_max_abs_difference": 0.0,
+      "ding_plugin_se_max_abs_difference": 0.0
+    },
+    "min_coefficient_covariance_ordering_eigenvalue": 2.94248794074786e-07,
+    "estimate_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    },
+    "interval_success": {
+      "ols": 80,
+      "model_assisted": 80,
+      "ma_x_interactions": 80,
+      "ding_plugin": 80
+    }
+  }
+]

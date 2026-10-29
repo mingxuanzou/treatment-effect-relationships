@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "preflight": false,
+  "summarize_only": false,
+  "attempted_datasets": 5000,
+  "scalar_records": 200000,
+  "checks": [
+    {
+      "n": 500,
+      "replications": 1000,
+      "records": 40000,
+      "max_abs_differences": {
+        "estimate": 2.842170943040401e-14,
+        "se": 7.275957614183426e-12,
+        "lower": 3.637978807091713e-12,
+        "upper": 4.547473508864641e-13,
+        "truth": 5.551115123125783e-17
+      },
+      "coverage_indicators_identical": true
+    },
+    {
+      "n": 1000,
+      "replications": 1000,
+      "records": 40000,
+      "max_abs_differences": {
+        "estimate": 4.440892098500626e-16,
+        "se": 2.220446049250313e-16,
+        "lower": 3.552713678800501e-15,
+        "upper": 4.440892098500626e-16,
+        "truth": 5.551115123125783e-17
+      },
+      "coverage_indicators_identical": true
+    },
+    {
+      "n": 2000,
+      "replications": 1000,
+      "records": 40000,
+      "max_abs_differences": {
+        "estimate": 2.220446049250313e-16,
+        "se": 9.8879238130678e-17,
+        "lower": 4.440892098500626e-16,
+        "upper": 4.440892098500626e-16,
+        "truth": 5.551115123125783e-17
+      },
+      "coverage_indicators_identical": true
+    },
+    {
+      "n": 5000,
+      "replications": 1000,
+      "records": 40000,
+      "max_abs_differences": {
+        "estimate": 2.220446049250313e-16,
+        "se": 9.8879238130678e-17,
+        "lower": 2.220446049250313e-16,
+        "upper": 2.220446049250313e-16,
+        "truth": 5.551115123125783e-17
+      },
+      "coverage_indicators_identical": true
+    },
+    {
+      "n": 10000,
+      "replications": 1000,
+      "records": 40000,
+      "max_abs_differences": {
+        "estimate": 2.220446049250313e-16,
+        "se": 9.974659986866641e-17,
+        "lower": 2.220446049250313e-16,
+        "upper": 2.220446049250313e-16,
+        "truth": 5.551115123125783e-17
+      },
+      "coverage_indicators_identical": true
+    }
+  ],
+  "seconds": 67.59046602249146,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "code_sha256": {
+    "run_xonly.py": "1ffda09bb2fe35137884f4394d21043477bb5b0ae7e9c02e36eac054ddf1ecab",
+    "super.py": "69e5edf2636e44b2130b38c9b83e8c6e5e610221a8cb7e98a623c17295ca47ee",
+    "run_all.py": "8adbde6744c0d7705b3932f8fff01538d069bcc9582ea11a6d5f2d503484ec4a",
+    "super_v4.py": "68ae69928375ce66ec1a3d912fff83b490a16c183a4fd1aca003dc2efd55bb70"
+  },
+  "summary_metrics_match_archived_plot_data": true
+}

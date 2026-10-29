@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "raw_arrays": [
+    {
+      "file": "fw_n2000_raw.npz",
+      "maximum_absolute_difference": 0
+    },
+    {
+      "file": "fw_n500_raw.npz",
+      "maximum_absolute_difference": 0
+    },
+    {
+      "file": "fw_n200_raw.npz",
+      "maximum_absolute_difference": 0
+    },
+    {
+      "file": "fw_n1000_raw.npz",
+      "maximum_absolute_difference": 0
+    },
+    {
+      "file": "fw_n5000_raw.npz",
+      "maximum_absolute_difference": 0
+    }
+  ],
+  "all_summary_bias_rmse_coverage_match": true
+}

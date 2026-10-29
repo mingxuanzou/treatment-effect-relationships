@@ -1,0 +1,63 @@
+{
+  "schedule": "independent",
+  "n": 1000,
+  "p": 0.5,
+  "kappa": 2.0,
+  "rho": 0.5,
+  "strength": 1.0,
+  "weak": "none",
+  "population_seed": 3724913916,
+  "assignment_seed": 1619683660,
+  "scenario": "fw_n1000",
+  "family": "F2_W",
+  "stage": "user_requested_followup",
+  "xset": "large",
+  "archived_scenario": "fv2_023",
+  "projected_noise_sd": 1.0,
+  "baseline_residual_correlation": 0.0008484186751642078,
+  "quadratic_noise_V11": 0.024152979846244635,
+  "quadratic_noise_V22": 0.025397352488806823,
+  "quadratic_noise_V12": 0.001113230740140437,
+  "reps": 2000,
+  "attempted_assignments": 2000,
+  "attempted_method_fits": 8000,
+  "failures": [],
+  "seconds": 4.42626953125,
+  "W_columns": {
+    "model_assisted": 12,
+    "ma_x_interactions": 10
+  },
+  "W_population_rank": {
+    "model_assisted": 12,
+    "ma_x_interactions": 10
+  },
+  "population_hashes": {
+    "X": "e810af9ce701a3ea93b842308e6ee45a6a43cd9a07b3160d6668eda376b37b78",
+    "U": "5e127cbbe8c74475249296482ee923c79f1e40eba3db90298ba0398ac3d7f3c8",
+    "irrelevant": "d2cb2217c1412a4e1c333618b1409dc8adb7c58beac5f2724a38e83121034e14",
+    "Y0": "73b4cd3bc4f1fa298c725b26d166b596f2f4f0d00de8e3ab6868e2291e3fbffe",
+    "Y1": "1649759b0627c46b1328c293a3bb220281a11bb2176fb859ce8c11e2099d7209"
+  },
+  "assignment_uint8_concatenation_sha256": "151ea0115a617222592d19bac22bb80d2e8fb913ccdd659a273b8be2438b03dd",
+  "archive_reproduction": {
+    "ols_estimate_max_abs_difference": 0.0,
+    "ols_se_max_abs_difference": 0.0,
+    "model_assisted_estimate_max_abs_difference": 0.0,
+    "model_assisted_se_max_abs_difference": 0.0,
+    "ding_plugin_estimate_max_abs_difference": 0.0,
+    "ding_plugin_se_max_abs_difference": 0.0
+  },
+  "min_coefficient_covariance_ordering_eigenvalue": 1.8088856015156069e-06,
+  "estimate_success": {
+    "ols": 16000,
+    "model_assisted": 16000,
+    "ma_x_interactions": 16000,
+    "ding_plugin": 16000
+  },
+  "interval_success": {
+    "ols": 16000,
+    "model_assisted": 16000,
+    "ma_x_interactions": 16000,
+    "ding_plugin": 16000
+  }
+}

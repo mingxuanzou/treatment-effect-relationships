@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "historical_input_checks_run": false,
+  "historical_archive_checks_run": false,
+  "max_difference_from_available_references": 0.0,
+  "checks": {},
+  "marginal_variance_ordering_holds_for_all_X": true,
+  "all_four_fixed_choices_reported": true,
+  "rows": 64,
+  "fit_elapsed_seconds": 3.4037766456604004,
+  "elapsed_seconds": 4.989995956420898
+}
