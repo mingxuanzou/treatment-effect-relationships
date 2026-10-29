@@ -34,11 +34,11 @@ assert len(PdfReader(ROOT/'tables_figures.pdf').pages)==8
 manifest = {'pages': [{'page':i+1,'path':str(p.relative_to(ROOT)),
                       'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
                      for i,p in enumerate(pages)],
-            'finite_population':'kappa=2; fixed large X; p=.5; rho=.5; OLS, W0=(X,U,X-by-U), Ding; 2000 shared assignments per population',
+            'finite_population':'kappa=2; fixed large X; p=.5; rho=.5; OLS, model assisted with W=(X,U,X-by-U), RI; 2000 shared assignments per population',
             'superpopulation':'Observational, large X, rho=.5, cubic ridge; direct, calibrated, naive, X-only, oracle; 1000 shared datasets per sample size',
             'source_of_randomness':'Treatment assignments only within each fixed finite population.',
             'real_data_tables':'Four approved common-base X choices per dataset; Direct/Calibrated for NVSS and OLS/Model assisted for Hillstrom. Sources: real_x_comparison/.',
-            'simulation_records':'Current finite figures select only OLS, model-assisted W0 and Ding from x_interactions_revision/; targeted_revision/ for superpopulation additions; earlier W comparisons remain in quadratic_x_only_revision/, targeted_revision/finite/ and finite_w_experiment/.',
+            'simulation_records':'Current finite figures select only OLS, model assisted and RI from x_interactions_revision/; targeted_revision/ for superpopulation additions; earlier W comparisons remain in quadratic_x_only_revision/, targeted_revision/finite/ and finite_w_experiment/.',
             'intervals':'Wald intervals intersected with [-1,1] for rho and [0,infinity) for V11/V22; V12 unchanged. Empty intersections shown Empty; simulation coverage unchanged.',
             'pdf_pages':8}
 (ROOT/'display_manifest.json').write_text(json.dumps(manifest,indent=2))

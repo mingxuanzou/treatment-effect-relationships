@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Three finite-population figures, fixed kappa=2 and target X, with W0=(X,U,X-by-U).
+"""Three finite-population figures, fixed kappa=2 and target X, with W=(X,U,X-by-U).
 
-Only reads completed simulation summaries. No fitting is done; display selection includes OLS, model assistance with W0, and Ding.
+Only reads completed simulation summaries. No fitting is done; display selection includes OLS, model assistance, and the RI estimator.
 Run: python3 presentation/plot_results.py [--input results/summary.csv --output figures]
 """
 from pathlib import Path
@@ -23,8 +23,8 @@ LABELS = [r'$V_{11}$', r'$V_{22}$', r'$V_{12}$', r'$\rho$', r'$\theta$', r'$\alp
 METHODS = ['ols', 'model_assisted', 'ding_plugin']
 STYLE = {
     'ols': dict(color='#2675AA', marker='o', ls='-', label='OLS'),
-    'model_assisted': dict(color='#D55E00', marker='s', ls='-', label=r'Model assisted ($W_0$)'),
-    'ding_plugin': dict(color='#777777', marker='D', ls='-', label='Ding'),
+    'model_assisted': dict(color='#D55E00', marker='s', ls='-', label='Model assisted'),
+    'ding_plugin': dict(color='#777777', marker='D', ls='-', label='RI'),
 }
 METHOD_LABEL = {m: STYLE[m]['label'] for m in METHODS}
 plt.rcParams.update({
@@ -138,7 +138,7 @@ def main():
         draw(data, metric, args.output)
     manifest = {
         'source': str(args.input), 'source_sha256': hashlib.sha256(args.input.read_bytes()).hexdigest(),
-        'selection': 'Fixed kappa=2, large X, p=.5, rho=.5; OLS, model-assisted W0=(X,U,X-by-U), and Ding; all five sizes.',
+        'selection': 'Fixed kappa=2, large X, p=.5, rho=.5; OLS, model assisted with W=(X,U,X-by-U), and RI; all five sizes.',
         'source_rows': len(data), 'assignments_per_population': 2000,
         'methods': {m: METHOD_LABEL[m] for m in METHODS},
         'uncertainty': 'Error bars and shaded bands are omitted at user request; Monte Carlo SEs remain in source summaries and paired contrasts. Coverage plots retain the 95% reference line.',
