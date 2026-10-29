@@ -3,32 +3,32 @@
     {
       "page": 1,
       "path": "simulation/superpopulation_coverage.pdf",
-      "sha256": "f654c50577bd1e389658ce6638f0a60e2ebda8d421450c450d4bc3e7e2ac7dd0"
+      "sha256": "e9d51f47491a36522c4d7959137cd512bff655270df7dfb02e6efa6522a8e856"
     },
     {
       "page": 2,
       "path": "simulation/superpopulation_bias.pdf",
-      "sha256": "ea5bb7ff95931259f5d625ebcae3bf3249ba9229c3992caa22cb67d3e368e879"
+      "sha256": "20de04cb8705873ec4316aff4a6af4957a4e884bca9302cc4936ab2eca1deec4"
     },
     {
       "page": 3,
       "path": "simulation/superpopulation_rmse.pdf",
-      "sha256": "be1c72fb84d64e8515d3259811cafbfa958528bdb137b9c6f3cd0084e8f2cb8d"
+      "sha256": "b6db960c1e77c63a58778e35a17b78e833d2d574423f0a35da48978a59c2ef2e"
     },
     {
       "page": 4,
       "path": "simulation/finite_population_coverage.pdf",
-      "sha256": "ce3cba93c7a05be27b4ff9b42f3f428e5af72d7d716af5831244fcafad2a0e46"
+      "sha256": "27acd60d5951c978eaecbab88625927acc73865acc8a1673f5c5c803e181e756"
     },
     {
       "page": 5,
       "path": "simulation/finite_population_bias.pdf",
-      "sha256": "c1eac6a6811e0b9ca9a6f2b7f00ad9159443d951261acf0f14b6ba7423d4be5f"
+      "sha256": "20097589cedac43f0d9a8f650d6a75d9c525f8211ba3b02cca8696ce234a510b"
     },
     {
       "page": 6,
       "path": "simulation/finite_population_rmse.pdf",
-      "sha256": "007b0a80d7a92b42803037f150489cf5cdce2012bc3134d3f86e575cb85afd7c"
+      "sha256": "945c47e68fb70182230e4295a6825f6f840241a6a506955d2cc339639c3a2870"
     },
     {
       "page": 7,
@@ -41,11 +41,11 @@
       "sha256": "b31536549ed90ccd0a8dc4934f75a7fe55eb1530dc2b1318aee8f66371e9acb1"
     }
   ],
-  "finite_population": "kappa=2; fixed large X; p=.5; rho=.5; OLS, W0=(X,U,X-by-U), Ding; 2000 shared assignments per population",
+  "finite_population": "kappa=2; fixed large X; p=.5; rho=.5; OLS, model assisted with W=(X,U,X-by-U), RI; 2000 shared assignments per population",
   "superpopulation": "Observational, large X, rho=.5, cubic ridge; direct, calibrated, naive, X-only, oracle; 1000 shared datasets per sample size",
   "source_of_randomness": "Treatment assignments only within each fixed finite population.",
   "real_data_tables": "Four approved common-base X choices per dataset; Direct/Calibrated for NVSS and OLS/Model assisted for Hillstrom. Sources: real_x_comparison/.",
-  "simulation_records": "Current finite figures select only OLS, model-assisted W0 and Ding from x_interactions_revision/; targeted_revision/ for superpopulation additions; earlier W comparisons remain in quadratic_x_only_revision/, targeted_revision/finite/ and finite_w_experiment/.",
+  "simulation_records": "Current finite figures select only OLS, model assisted and RI from x_interactions_revision/; targeted_revision/ for superpopulation additions; earlier W comparisons remain in quadratic_x_only_revision/, targeted_revision/finite/ and finite_w_experiment/.",
   "intervals": "Wald intervals intersected with [-1,1] for rho and [0,infinity) for V11/V22; V12 unchanged. Empty intersections shown Empty; simulation coverage unchanged.",
   "pdf_pages": 8
 }

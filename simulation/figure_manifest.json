@@ -1,13 +1,13 @@
 {
   "source": "/workspace/scratch/5db7ae344d21/replication_package/simulation/source_data/finite_w_summary.csv",
   "source_sha256": "e22a1e1443dcfbcca95df19f695fc42e483ca7a3e1b676f7d97bfc00a0a64845",
-  "selection": "Fixed kappa=2, large X, p=.5, rho=.5; OLS, model-assisted W0=(X,U,X-by-U), and Ding; all five sizes.",
+  "selection": "Fixed kappa=2, large X, p=.5, rho=.5; OLS, model assisted with W=(X,U,X-by-U), and RI; all five sizes.",
   "source_rows": 90,
   "assignments_per_population": 2000,
   "methods": {
     "ols": "OLS",
-    "model_assisted": "Model assisted ($W_0$)",
-    "ding_plugin": "Ding"
+    "model_assisted": "Model assisted",
+    "ding_plugin": "RI"
   },
   "uncertainty": "Error bars and shaded bands are omitted at user request; Monte Carlo SEs remain in source summaries and paired contrasts. Coverage plots retain the 95% reference line.",
   "coverage_event": "Untruncated separate 95% Wald interval contains exact fixed-population target; all attempted assignments in denominator.",
